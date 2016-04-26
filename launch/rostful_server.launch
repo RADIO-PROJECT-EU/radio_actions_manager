@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!--  -->
+  <node pkg="rostful" type="server" name="radio_rostful_server" output="screen"
+	args="--host 172.17.20.125 -p 8081 --topics /radio_action_manager_node/state --services /radio_action_manager_node/action"/>
+
+</launch>

@@ -1,0 +1,9 @@
+# actions: goto, cancel
+string action_type
+geometry_msgs/Pose2D location
+---
+# -1 -> ERROR
+# 0 -> OK
+# 1 -> BUSY
+# 2 -> UNKNOWN_ACTION
+int32 ret

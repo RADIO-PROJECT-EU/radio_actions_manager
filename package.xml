@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package>
+  <name>radio_actions_manager</name>
+  <version>1.0.0</version>
+  <description>The radio_actions_manager package. This package receives positions and sends the goal to MoveBase</description>
+
+  <maintainer email="rnavarro@robotnik.es">Román Navarro</maintainer>
+  <maintainer email="jmrapado@robotnik.es">Jose Rapado</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>actionlib</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <run_depend>actionlib</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>move_base</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>
