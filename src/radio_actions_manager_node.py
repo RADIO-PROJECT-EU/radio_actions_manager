@@ -281,17 +281,17 @@ class RadioActionManager:
 			Actions performed in ready state
 		'''
 		self._move_base_action_client.wait_for_result(rospy.Duration.from_sec(1.0))
-		#print self.sac.get_state()
+		#print self._move_base_action_client.get_state()
 			
 		if self._move_base_action_client.get_state()== 3 :		   
 			rospy.loginfo("the base reached the goal")
 			self.switchToState(State.INIT_STATE)
-			print self.sac.get_result()
+			print self._move_base_action_client.get_result()
 						
 		if (self._move_base_action_client.get_state()!= 1 and self._move_base_action_client.get_state()!= 3):
 			self._move_base_action_client.cancel_goal()
-			rospy.logerror("Navigation Failed")
-			print self.sac.get_result()
+			rospy.logerr("Navigation Failed")
+			print self._move_base_action_client.get_result()
 		
 		
 		return
