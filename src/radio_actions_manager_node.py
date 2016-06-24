@@ -426,7 +426,7 @@ class RadioActionManager:
 				#send goal
 				ret = self._move_base_action_client.send_goal(goal)
 				
-				self.switchToState(State.READY_STATE)
+				#self.switchToState(State.READY_STATE)
 				
 				return OK
 			elif req.action_type == CANCEL_ACTION:
