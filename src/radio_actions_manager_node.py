@@ -283,15 +283,16 @@ class RadioActionManager:
 		self._move_base_action_client.wait_for_result(rospy.Duration.from_sec(1.0))
 		#print self._move_base_action_client.get_state()
 			
-		if self._move_base_action_client.get_state()== 3 :		   
+		if self._move_base_action_client.get_state()== 0 :		   
 			rospy.loginfo("the base reached the goal")
 			self.switchToState(State.INIT_STATE)
 			print self._move_base_action_client.get_result()
 						
-		if (self._move_base_action_client.get_state()!= 1 and self._move_base_action_client.get_state()!= 3):
+		if (self._move_base_action_client.get_state()!= 1 and self._move_base_action_client.get_state()!= 0):
 			self._move_base_action_client.cancel_goal()
 			rospy.logerr("Navigation Failed")
 			print self._move_base_action_client.get_result()
+			self.switchToState(State.STANDBY_STATE)
 		
 		
 		return
